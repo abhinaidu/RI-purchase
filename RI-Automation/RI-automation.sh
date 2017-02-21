@@ -12,7 +12,7 @@ do
   echo "The Offering is $f8"
   echo "The instance count is $f9"
 
-echo "The list of available RIs for purchase are:" | aws ec2 describe-reserved-instances-offerings --instance-type "$f3" --availability-zone "$f2" --instance-tenancy "$f5" --offering-type "$f8" --offering-class "$f7" --no-include-marketplace --filters "Name=duration,Values=$f6" --product-description "$f4" --output text --query 'ReservedInstancesOfferings[*].ReservedInstancesOfferingId' > ./RI-list.txt
+echo "The list of available RIs for purchase are:" | aws ec2 describe-reserved-instances-offerings --instance-type "$f3" --availability-zone "$f2" --instance-tenancy "$f5" --offering-type "$f8" --offering-class "$f7" --no-include-marketplace --filters "Name=duration,Values=$f6" --filters "Name=scope,Values=Region" --product-description "$f4" --output text --query 'ReservedInstancesOfferings[*].ReservedInstancesOfferingId' > ./RI-list.txt
 
 cat ./RI-list.txt >> RI-Consolidated.txt
 
