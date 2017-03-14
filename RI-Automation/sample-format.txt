@@ -1,2 +1,1 @@
-us-east-1,us-east-1a,t2.micro,Linux/UNIX,default,31536000,standard,No Upfront,3
-us-east-1,us-east-1a,m3.medium,Linux/UNIX,default,31536000,standard,No Upfront,4
+us-west-2,us-west-2a,t2.large,Linux/UNIX,default,31536000,standard,No Upfront,4
